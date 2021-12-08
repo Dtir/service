@@ -32,6 +32,7 @@ with  open (path,'w',encoding='utf8',newline='') as fw:
     fw.write(ser_d)
 fw.close()
 k_set=input('файл set_win_serv.json сформирован? 1 - true')
+service='TermService'
 if k_set=='1':
     print('Процесс start/stop win service')
     with open(path_r,'r',encoding='utf8') as fr:
@@ -61,3 +62,16 @@ else:
   нужно сформировать файл set_win_serv.json для запуска/останова служб        
         '''
     print(pr)
+cl=10
+while cl>0:
+    # print(cl)
+    cl=int(input('0 - выход'))
+
+# run cmd for admin root
+# cd C:\pyprog\win
+# python  service_win.py
+#Не удалось запустить дочернюю службу.
+# python pyinstaller.exe --onefile service_win.py
+# python 'C:\Program Files\Python38\Scripts\pyinstaller.exe' --onefile winservice_win.py
+# python pip PyInstaller
+# cd C:\Program Files\Python38\Scripts
